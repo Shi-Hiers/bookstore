@@ -1,9 +1,61 @@
-{% extends "base.html" %}
+{% extends "base.html" %}  <!-- Inherit the layout and styles from base.html -->
 
-{% block content %}
+{% block content %}  <!-- Begin block for content specific to this page -->
+    <header>
+        <div style="text-align: center;">  <!-- Centered layout for the header -->
+            <h1>Welcome to Happy Tails Pet Shop!</h1>  <!-- Main title of the page -->
+            <!-- Images representing the shop's offerings -->
+            <img src="{{ url_for('static', filename='assets/happy pet2.jpg') }}" width="350" style="display: inline-block; margin-right: 10px;">
+            <img src="{{ url_for('static', filename='assets/pet 4.jpg') }}" width="125" style="display: inline-block;">
+            <img src="{{ url_for('static', filename='assets/happy pet3.jpg') }}" width="300" style="display: inline-block;">
+        </div>
+    </header>
 
-<h1>Welcome to Tyler Marshall's Best Website</h1>
-<br>
-<img src="{{ url_for('static', filename='assets/tyler.jpg') }}" alt="Tyler with his cool Glasses" width="300">
+    <main>  <!-- Main content area of the page -->
 
-{% endblock %}
+        <style>
+            h2 {
+                margin-top: 40px;  /* Adjust the top margin as needed */
+                margin-bottom: 10px;  /* Adjust the bottom margin as needed */
+            }
+        </style>
+
+        <section id="overview">  <!-- Section for shop overview -->
+            <h2 class="main-header">Overview of the Shop</h2>  <!-- Subheading for the overview -->
+            <p>At Happy Tails Pet Shop, we are dedicated to connecting loving families with wonderful pets. Our shop offers a wide selection of pets, including dogs, cats, fish, and small animals, along with high-quality food and supplies to keep them happy and healthy.</p>  <!-- Description of the shop's mission and offerings -->
+        </section>
+
+        <section id="pet-care-tips">  <!-- Section for pet care tips -->
+            <h2 class="main-header">Pet Care Tips</h2>  <!-- Subheading for pet care advice -->
+            <p>Check out our expert tips on caring for your new pet:</p>  <!-- Introduction to the tips -->
+            <ul>  <!-- Unordered list of pet care tips -->
+                <li>Regular Vet Check-ups: Ensure your pet gets regular health checks.</li>  <!-- Tip for veterinary care -->
+                <li>Proper Nutrition: Feed your pet a balanced diet suitable for their age and species.</li>  <!-- Tip for nutrition -->
+                <li>Exercise: Keep your pets active with daily exercise tailored to their needs.</li>  <!-- Tip for exercise -->
+                <li>Grooming: Regular grooming helps maintain your pet's coat and hygiene.</li>  <!-- Tip for grooming -->
+            </ul>
+        </section>
+
+        <section id="featured-products">  <!-- Section for featured products -->
+            <h2 class="main-header">Featured Products</h2>  <!-- Subheading for products -->
+            <p>Explore our top-selling products for your pets:</p>  <!-- Introduction to featured products -->
+            <ul>  <!-- Unordered list of featured products -->
+                <li><strong>Premium Dog Food</strong> - High-quality nutrition for your furry friend.</li>  <!-- Description of dog food -->
+                <img src="{{ url_for('static', filename='assets/pet food') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for dog food -->
+                <li><strong>Cat Trees and Scratching Posts</strong> - Keep your cats entertained and healthy.</li>  <!-- Description of cat trees -->
+                <img src="{{ url_for('static', filename='assets/cat post.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for cat trees -->
+                <li><strong>Aquarium Supplies</strong> - Everything you need for a beautiful aquarium.</li>  <!-- Description of aquarium supplies -->
+                <img src="{{ url_for('static', filename='assets/aquarium') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for aquarium supplies -->
+                <li><strong>Pet Toys</strong> - Fun and engaging toys for all types of pets.</li>  <!-- Description of pet toys -->
+                <img src="{{ url_for('static', filename='assets/pet toy.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for pet toys -->
+            </ul>
+        </section>
+
+        <section id="promotions">  <!-- Section for promotions and events -->
+            <h2 class="main-header">Promotions and Special Events</h2>  <!-- Subheading for promotions -->
+            <p>Join us for our Pet Adoption Day on Saturday, October 15th! Enjoy discounted adoption fees and meet our wonderful pets looking for homes.</p>  <!-- Promotion for adoption event -->
+            <p>Don't miss our Halloween Costume Contest for pets on October 31st! Prizes for the best-dressed pets!</p>  <!-- Promotion for Halloween event -->
+        </section>
+    </main>
+
+{% endblock %}  <!-- End of content block -->

@@ -1,8 +1,105 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}  <!-- Extends the base template for consistent layout -->
 
-{% block content %}
+{% block content %}  <!-- Begin the content block -->
+<header>
+    <div style="text-align: center;">  <!-- Centered header content -->
+        <h1>Pets for Adoption</h1>  <!-- Main heading for the page -->
+        <img src="{{ url_for('static', filename='assets/pet 1.jpg') }}" width="250" style="display: inline-block; margin-right: 10px;">  <!-- Image of a pet -->
+    </div>
+</header>
 
-<h1>About</h1>
+<main>
+    <style>
+        h2 {
+            margin-top: 20px;  /* Adjust the top margin as needed */
+            margin-bottom: 10px;  /* Adjust the bottom margin as needed */
+        }
 
+        h3 {
+            margin-top: 50px;  /* Adjust the top margin as needed */
+            margin-bottom: 5px;  /* Adjust the bottom margin as needed */
+        }
+    </style>
 
-{% endblock %}
+    <section id="search-filter">  <!-- Section for search and filter options -->
+        <h2>Search and Filter Options</h2>  <!-- Subheading for the filter section -->
+        <form id="search-form">  <!-- Search form for users to input their criteria -->
+            <label for="species">Species:</label>
+            <select id="species" name="species">  <!-- Dropdown for selecting species -->
+                <option value="all">All</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="fish">Fish</option>
+            </select>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" placeholder="Enter breed">  <!-- Input for breed search -->
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter age (in years)">  <!-- Input for age search -->
+
+            <button type="submit">Search</button>  <!-- Search button -->
+        </form>
+    </section>
+
+    <section id="available-pets">  <!-- Section listing available pets -->
+        <h2>Available Pets</h2>  <!-- Subheading for available pets -->
+        <ul>
+            <li>
+                <h3>Buddy</h3>  <!-- Name of the pet -->
+                <p>Breed: Labrador Retriever</p>  <!-- Breed of the pet -->
+                <p>Age: 2 years</p>  <!-- Age of the pet -->
+                <p>Price: $150</p>  <!-- Adoption price -->
+                <p>Description: A friendly and energetic dog who loves to play!</p>  <!-- Description of the pet -->
+                <img src="{{ url_for('static', filename='assets/buddy.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image of the pet -->
+            </li>
+            <li>
+                <h3>Whiskers</h3>
+                <p>Breed: Domestic Shorthair</p>
+                <p>Age: 1 year</p>
+                <p>Price: $75</p>
+                <p>Description: A sweet and affectionate cat who loves to cuddle.</p>
+                <img src="{{ url_for('static', filename='assets/whiskers.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image of the pet -->
+            </li>
+            <li>
+                <h3>Goldie</h3>
+                <p>Breed: Goldfish</p>
+                <p>Age: 6 months</p>
+                <p>Price: $10</p>
+                <p>Description: A bright and lively fish that adds color to any aquarium.</p>
+                <img src="{{ url_for('static', filename='assets/goldie.jpg') }}" width="300" style="display: inline-block; margin-right: 10px;">  <!-- Image of the pet -->
+            </li>
+        </ul>
+    </section>
+
+    <section id="adoption-process">  <!-- Section explaining the adoption process -->
+        <h2>Adoption Process</h2>
+        <p>To adopt a pet, please follow these steps:</p>
+        <ol>  <!-- Ordered list of steps for adoption -->
+            <li>Visit our shop and meet the pets available for adoption.</li>
+            <li>Fill out an adoption application form.</li>
+            <li>Our staff will review your application and may contact you for additional information.</li>
+            <li>Upon approval, you will be invited to complete the adoption.</li>
+        </ol>
+    </section>
+
+    <section id="inquiries">  <!-- Section for submitting inquiries or applications -->
+        <h2>Submit Adoption Applications or Inquiries</h2>
+        <form id="inquiry-form">  <!-- Inquiry form for users -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>  <!-- Input for user name -->
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>  <!-- Input for user email -->
+
+            <label for="pet-name">Pet Name:</label>
+            <input type="text" id="pet-name" name="pet-name" required>  <!-- Input for name of the pet being inquired about -->
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>  <!-- Textarea for additional message -->
+
+            <button type="submit">Submit Inquiry</button>  <!-- Button to submit the inquiry form -->
+        </form>
+    </section>
+</main>
+{% endblock %}  <!-- End of content block -->
