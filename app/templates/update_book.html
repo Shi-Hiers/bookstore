@@ -6,7 +6,7 @@
     <h1 class="text-center mb-4">Update Book</h1>
 
     <!-- Update Book Form -->
-    <form method="POST" action="{{ url_for('runners.update_runner', runner_id=runner.runner_id) }}">
+    <form method="POST" action="{{ url_for('books.update_book', book_id=book.book_id) }}">
         <div class="form-row">
             <div class="col">
                 <label for="title">Title</label>
@@ -30,9 +30,8 @@
             </div>
         </div>
         <button type="submit" class="btn btn-primary mt-4">Update Book</button>
-        <a href="{{ url_for('books.books_page') }}" class="btn btn-secondary mt-4">Cancel</a>
+        <a href="{{ url_for('books.book') }}" class="btn btn-secondary mt-4">Cancel</a>
     </form>
 </div>
 
 {% endblock %}
-

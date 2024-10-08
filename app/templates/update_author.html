@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Update Author</h1>
+
+    <!-- Update Author Form -->
+    <form method="POST" action="{{ url_for('authors.update_author', author_id=author.author_id) }}">
+        <div class="form-row">
+            <div class="col">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" value="{{ author.first_name }}" required>
+            </div>
+            <div class="col">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" value="{{ author.last_name }}" required>
+            </div>
+              <div class="col">
+                <label for="birthdate">Written Books</label>
+                <input type="text" class="form-control" id="written_books" name="written_books" value="{{ author.written_books }}" required>
+            </div>
+            <div class="col">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" class="form-control" id="birthdate" name="birthdate" value="{{ author.birthdate }}" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Update Author</button>
+        <a href="{{ url_for('authors.author') }}" class="btn btn-secondary mt-4">Cancel</a>
+    </form>
+</div>
+
+{% endblock %}
