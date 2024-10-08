@@ -1,61 +1,61 @@
 {% extends "base.html" %}  <!-- Inherit the layout and styles from base.html -->
 
 {% block content %}  <!-- Begin block for content specific to this page -->
-    <header>
-        <div style="text-align: center;">  <!-- Centered layout for the header -->
-            <h1>Welcome to Happy Tails Pet Shop!</h1>  <!-- Main title of the page -->
-            <!-- Images representing the shop's offerings -->
-            <img src="{{ url_for('static', filename='assets/happy pet2.jpg') }}" width="350" style="display: inline-block; margin-right: 10px;">
-            <img src="{{ url_for('static', filename='assets/pet 4.jpg') }}" width="125" style="display: inline-block;">
-            <img src="{{ url_for('static', filename='assets/happy pet3.jpg') }}" width="300" style="display: inline-block;">
-        </div>
-    </header>
+<header>
+    <div style="text-align: center;">  <!-- Centered layout for the header -->
+        <h1>Welcome to Page Turner Bookstore!</h1>  <!-- Main title of the page -->
+        <!-- Images representing the bookstore's offerings -->
+        <img src="{{ url_for('static', filename='assets/book1.jpg') }}" width="350" style="display: inline-block; margin-right: 10px;">
+        <img src="{{ url_for('static', filename='assets/book2.jpg') }}" width="125" style="display: inline-block;">
+        <img src="{{ url_for('static', filename='assets/book3.jpg') }}" width="300" style="display: inline-block;">
+    </div>
+</header>
 
-    <main>  <!-- Main content area of the page -->
+<main>  <!-- Main content area of the page -->
 
-        <style>
-            h2 {
-                margin-top: 40px;  /* Adjust the top margin as needed */
-                margin-bottom: 10px;  /* Adjust the bottom margin as needed */
-            }
-        </style>
+    <style>
+        h2 {
+            margin-top: 40px;  /* Adjust the top margin as needed */
+            margin-bottom: 10px;  /* Adjust the bottom margin as needed */
+        }
+    </style>
 
-        <section id="overview">  <!-- Section for shop overview -->
-            <h2 class="main-header">Overview of the Shop</h2>  <!-- Subheading for the overview -->
-            <p>At Happy Tails Pet Shop, we are dedicated to connecting loving families with wonderful pets. Our shop offers a wide selection of pets, including dogs, cats, fish, and small animals, along with high-quality food and supplies to keep them happy and healthy.</p>  <!-- Description of the shop's mission and offerings -->
-        </section>
+    <section id="overview">  <!-- Section for shop overview -->
+        <h2 class="main-header">Overview of the Bookstore</h2>  <!-- Subheading for the overview -->
+        <p>At Page Turner Bookstore, we are passionate about connecting readers with their next great read. Our store offers a vast selection of books across various genres, along with author events and reading programs for all ages.</p>  <!-- Description of the bookstore's mission and offerings -->
+    </section>
 
-        <section id="pet-care-tips">  <!-- Section for pet care tips -->
-            <h2 class="main-header">Pet Care Tips</h2>  <!-- Subheading for pet care advice -->
-            <p>Check out our expert tips on caring for your new pet:</p>  <!-- Introduction to the tips -->
-            <ul>  <!-- Unordered list of pet care tips -->
-                <li>Regular Vet Check-ups: Ensure your pet gets regular health checks.</li>  <!-- Tip for veterinary care -->
-                <li>Proper Nutrition: Feed your pet a balanced diet suitable for their age and species.</li>  <!-- Tip for nutrition -->
-                <li>Exercise: Keep your pets active with daily exercise tailored to their needs.</li>  <!-- Tip for exercise -->
-                <li>Grooming: Regular grooming helps maintain your pet's coat and hygiene.</li>  <!-- Tip for grooming -->
-            </ul>
-        </section>
+    <section id="reading-tips">  <!-- Section for reading tips -->
+        <h2 class="main-header">Reading Tips</h2>  <!-- Subheading for reading advice -->
+        <p>Check out our expert tips for enhancing your reading experience:</p>  <!-- Introduction to the tips -->
+        <ul>  <!-- Unordered list of reading tips -->
+            <li>Set Aside Dedicated Time: Create a reading schedule that fits your lifestyle.</li>  <!-- Tip for scheduling -->
+            <li>Explore Different Genres: Don't be afraid to try something new!</li>  <!-- Tip for exploring genres -->
+            <li>Join a Book Club: Share your thoughts and discover new books with friends.</li>  <!-- Tip for social reading -->
+            <li>Keep a Reading Journal: Take notes on what you've read to enhance retention.</li>  <!-- Tip for journaling -->
+        </ul>
+    </section>
 
-        <section id="featured-products">  <!-- Section for featured products -->
-            <h2 class="main-header">Featured Products</h2>  <!-- Subheading for products -->
-            <p>Explore our top-selling products for your pets:</p>  <!-- Introduction to featured products -->
-            <ul>  <!-- Unordered list of featured products -->
-                <li><strong>Premium Dog Food</strong> - High-quality nutrition for your furry friend.</li>  <!-- Description of dog food -->
-                <img src="{{ url_for('static', filename='assets/pet food') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for dog food -->
-                <li><strong>Cat Trees and Scratching Posts</strong> - Keep your cats entertained and healthy.</li>  <!-- Description of cat trees -->
-                <img src="{{ url_for('static', filename='assets/cat post.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for cat trees -->
-                <li><strong>Aquarium Supplies</strong> - Everything you need for a beautiful aquarium.</li>  <!-- Description of aquarium supplies -->
-                <img src="{{ url_for('static', filename='assets/aquarium') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for aquarium supplies -->
-                <li><strong>Pet Toys</strong> - Fun and engaging toys for all types of pets.</li>  <!-- Description of pet toys -->
-                <img src="{{ url_for('static', filename='assets/pet toy.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for pet toys -->
-            </ul>
-        </section>
+    <section id="featured-books">  <!-- Section for featured books -->
+        <h2 class="main-header">Featured Books</h2>  <!-- Subheading for featured books -->
+        <p>Explore our top-selling books this month:</p>  <!-- Introduction to featured books -->
+        <ul>  <!-- Unordered list of featured books -->
+            <li><strong>The Midnight Library</strong> - A thought-provoking tale about choices and regrets.</li>  <!-- Description of the book -->
+            <img src="{{ url_for('static', filename='assets/midnight_library.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+            <li><strong>Where the Crawdads Sing</strong> - A captivating story of love and survival.</li>  <!-- Description of the book -->
+            <img src="{{ url_for('static', filename='assets/crawdads.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+            <li><strong>The Vanishing Half</strong> - A powerful narrative about identity and family.</li>  <!-- Description of the book -->
+            <img src="{{ url_for('static', filename='assets/vanishing_half.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+            <li><strong>Project Hail Mary</strong> - An adventurous sci-fi thriller by Andy Weir.</li>  <!-- Description of the book -->
+            <img src="{{ url_for('static', filename='assets/hail_mary.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+        </ul>
+    </section>
 
-        <section id="promotions">  <!-- Section for promotions and events -->
-            <h2 class="main-header">Promotions and Special Events</h2>  <!-- Subheading for promotions -->
-            <p>Join us for our Pet Adoption Day on Saturday, October 15th! Enjoy discounted adoption fees and meet our wonderful pets looking for homes.</p>  <!-- Promotion for adoption event -->
-            <p>Don't miss our Halloween Costume Contest for pets on October 31st! Prizes for the best-dressed pets!</p>  <!-- Promotion for Halloween event -->
-        </section>
-    </main>
+    <section id="events">  <!-- Section for promotions and events -->
+        <h2 class="main-header">Events and Special Promotions</h2>  <!-- Subheading for events -->
+        <p>Join us for our Book Signing Event with local authors on Saturday, November 5th! Get your books signed and meet your favorite writers.</p>  <!-- Promotion for book signing -->
+        <p>Don't miss our Monthly Book Club meeting on the first Tuesday of each month! All are welcome to join the discussion.</p>  <!-- Promotion for book club -->
+    </section>
+</main>
 
 {% endblock %}  <!-- End of content block -->

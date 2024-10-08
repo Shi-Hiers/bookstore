@@ -3,45 +3,62 @@
 {% block content %}
 
 <div class="container mt-5">
-    <h1 class="text-center mb-4">Runners</h1>
+    <h1 class="text-center mb-4">Books</h1>
 
-    <!-- Form to add a new runner -->
+    <!-- Form to add a new book -->
     <form method="POST" action="{{ url_for('runners.runner') }}" class="mb-4">
         <div class="form-row">
             <div class="col">
-                <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+                <input type="text" class="form-control" name="title" placeholder="Book Title" required>
             </div>
             <div class="col">
-                <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
+                <input type="text" class="form-control" name="author" placeholder="Author" required>
             </div>
             <div class="col">
-                <button type="submit" class="btn btn-primary">Add Runner</button>
+                <input type="text" class="form-control" name="genre" placeholder="Genre" required>
+            </div>
+            <div class="col">
+                <input type="date" class="form-control" name="publication_date" placeholder="Publication Date" required>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="price" placeholder="Price" step="0.01" required>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Add Book</button>
             </div>
         </div>
     </form>
 
-    <!-- Table to display all runners -->
+    <hr>
+
+    <!-- Table to display all books -->
     <table class="table table-striped table-bordered">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Runner ID</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">Book ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Publication Date</th>
+                <th scope="col">Price</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
-            {% for runner in all_runners %}
+            {% for book in all_books %}
             <tr>
-                <td>{{ runner.runner_id }}</td>
-                <td>{{ runner.first_name }}</td>
-                <td>{{ runner.last_name }}</td>
+                <td>{{ book.book_id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.genre }}</td>
+                <td>{{ book.publication_date }}</td>
+                <td>${{ "%.2f"|format(book.price) }}</td>
                 <td>
                     <!-- Update button -->
                     <a href="{{ url_for('runners.update_runner', runner_id=runner.runner_id) }}" class="btn btn-warning btn-sm">Update</a>
                     <!-- Delete button -->
                     <form action="{{ url_for('runners.delete_runner', runner_id=runner.runner_id) }}" method="POST" style="display:inline;">
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this runner?');">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this book?');">Delete</button>
                     </form>
                 </td>
             </tr>
