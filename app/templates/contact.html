@@ -1,52 +1,54 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <header>
-        <div style="text-align: center;">
-            <h1>Contact Us</h1>
-        </div>
-    </header>
+<div class="container mt-5">
+    <h1 class="text-center">Contact Us</h1>
+    <p class="text-center">We'd love to hear from you! Whether you have questions, feedback, or need assistance, reach out to us.</p>
 
-    <main>
-        <section id="contact-info">
-            <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> (555) 123-4567</p>
-            <p><strong>Email:</strong> info@happytailspetshop.com</p>
-            <p><strong>Address:</strong> 123 Pet Lane, Pet City, PC 12345</p>
-        </section>
-
-        <section id="contact-form" style="margin-top: 40px;">
-            <h2>Contact Form</h2>
-            <form action="submit_form.php" method="POST"> <!-- Update with your form handling script -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
+    <div class="row my-4">
+        <div class="col-md-6">
+            <h2>Get in Touch</h2>
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
-        </section>
+        </div>
 
-        <section id="social-media">
+        <div class="col-md-6">
+            <h2>Our Location</h2>
+            <p><strong>Page Turner Bookstore</strong><br>
+            123 Book St.<br>
+            Literature City, LT 12345</p>
+            <h5>Store Hours:</h5>
+            <p>Monday - Friday: 9 AM - 6 PM<br>
+            Saturday: 10 AM - 5 PM<br>
+            Sunday: Closed</p>
+
             <h2>Follow Us</h2>
-            <ul>
-                <li>Facebook: @HappyTailsPets</li>
-                <li>Instagram: @Happy_Tails_Pets</li>
-                <li>Twitter: @HappyTailsPS</li>
+            <p>Stay connected and follow us on social media:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/PageTurnerBookstore" target="_blank">Facebook</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.twitter.com/PageTurnerBooks" target="_blank">Twitter</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/PageTurnerBookstore" target="_blank">Instagram</a>
+                </li>
             </ul>
-        </section>
-
-        <section id="map">
-            <h2>Map and Directions</h2>
-            <p>Find us at:</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.100123488405!2d-122.084!3d37.42199999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbcdaaaa12345%3A0x123456789abcdef0!2sHappy%20Tails%20Pet%20Shop!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
-    </main>
-
+        </div>
+    </div>
+</div>
 {% endblock %}
