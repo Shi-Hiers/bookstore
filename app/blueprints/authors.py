@@ -56,7 +56,7 @@ def update_author(author_id):
     cursor.execute('SELECT * FROM authors WHERE author_id = %s', (author_id,))
     author = cursor.fetchone()
     # app/blueprints/authors.py
-    return render_template('update_authors.html', author=author)
+    return render_template('update_author.html', author=author)
 @authors.route('/delete_author/<int:author_id>', methods=['POST'])
 def delete_author(author_id):
     db = get_db()
