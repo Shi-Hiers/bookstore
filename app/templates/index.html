@@ -2,6 +2,12 @@
 
 {% block content %}  <!-- Begin block for content specific to this page -->
 <header>
+       <style>
+        h1 {
+            margin-top: 20px;  /* Adjust the top margin as needed */
+            margin-bottom: 30px;  /* Adjust the bottom margin as needed */
+        }
+    </style>
     <div style="text-align: center;">  <!-- Centered layout for the header -->
         <h1>Welcome to Page Turner Bookstore!</h1>  <!-- Main title of the page -->
         <!-- Images representing the bookstore's offerings -->
@@ -12,6 +18,12 @@
 <main>  <!-- Main content area of the page -->
 
     <style>
+        h5 {
+            margin-top: 40px;  /* Adjust the top margin as needed */
+            margin-bottom: 10px;  /* Adjust the bottom margin as needed */
+        }
+    </style>
+       <style>
         h2 {
             margin-top: 40px;  /* Adjust the top margin as needed */
             margin-bottom: 10px;  /* Adjust the bottom margin as needed */
@@ -34,20 +46,20 @@
         </ul>
     </section>
 
-    <section id="featured-books">  <!-- Section for featured books -->
-        <h2 class="main-header">Featured Books</h2>  <!-- Subheading for featured books -->
-        <p>Explore our top-selling books this month:</p>  <!-- Introduction to featured books -->
-        <ul>  <!-- Unordered list of featured books -->
-            <li><strong>The Midnight Library</strong> - A thought-provoking tale about choices and regrets.</li>  <!-- Description of the book -->
-            <img src="{{ url_for('static', filename='assets/book1.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
-            <li><strong>Where the Crawdads Sing</strong> - A captivating story of love and survival.</li>  <!-- Description of the book -->
-            <img src="{{ url_for('static', filename='assets/book2.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
-            <li><strong>The Vanishing Half</strong> - A powerful narrative about identity and family.</li>  <!-- Description of the book -->
-            <img src="{{ url_for('static', filename='assets/book3.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
-            <li><strong>Project Hail Mary</strong> - An adventurous sci-fi thriller by Andy Weir.</li>  <!-- Description of the book -->
-            <img src="{{ url_for('static', filename='assets/book4.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
-        </ul>
-    </section>
+   <section id="featured-books">  <!-- Section for featured books -->
+    <h2 class="main-header">Featured Books</h2>  <!-- Subheading for featured books -->
+    <p>Explore our top-selling books this month:</p>  <!-- Introduction to featured books -->
+    <ul>  <!-- Unordered list of featured books -->
+        <li><h5><strong>The Midnight Library</strong> - A thought-provoking tale about choices and regrets.</h5></li>  <!-- Description of the book -->
+        <img src="{{ url_for('static', filename='assets/book1.jpg') }}" width="130" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+        <li><h5><strong>Where the Crawdads Sing</strong> - A captivating story of love and survival.</h5></li>  <!-- Description of the book -->
+        <img src="{{ url_for('static', filename='assets/book2.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+        <li><h5><strong>The Vanishing Half</strong> - A powerful narrative about identity and family.</h5></li>  <!-- Description of the book -->
+        <img src="{{ url_for('static', filename='assets/book3.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+        <li><h5><strong>Project Hail Mary</strong> - An adventurous sci-fi thriller by Andy Weir.</h5></li>  <!-- Description of the book -->
+        <img src="{{ url_for('static', filename='assets/book4.jpg') }}" width="150" style="display: inline-block; margin-right: 10px;">  <!-- Image for the book -->
+    </ul>
+</section>
 </main>
 
 {% endblock %}  <!-- End of content block -->
